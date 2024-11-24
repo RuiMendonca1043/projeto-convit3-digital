@@ -1,0 +1,63 @@
+GET http://localhost:4000/ping
+
+###
+GET http://localhost:4000/eventos
+
+###
+GET http://localhost:4000/eventos/casamento-alberto-marina
+
+###
+GET http://localhost:4000/eventos/aa22f5b6-362f-42d5-bba7-8d5be5d0b678
+
+###
+GET http://localhost:4000/eventos/validar/evento-fullstack/aa22f5b6-362f-42d5-bba7-8d5be5d0b678
+
+###
+POST http://localhost:4000/eventos/aceder
+Content-Type: application/json
+
+{
+    "id":"aa22f5b6-362f-42d5-bba7-8d5be5d0b678",
+    "senha":"casamento2024"
+}
+
+###
+POST http://localhost:4000/eventos/casamento-alberto-marina/convidado
+Content-Type: application/json
+
+{
+    "nome":"Rui Mendonça",
+    "email":"rpfm.14@gmail.com",
+    "confirmado":true,
+    "possuiAcompanhantes":true,
+    "qtdeAcompanhantes":2
+}
+
+###
+POST http://localhost:4000/eventos
+Content-Type: application/json
+
+{
+    "alias": "evento-fullstack-inicio",
+    "senha": "senha123",
+    "nome": "Evento de Desenvolvimento Fullstack",
+    "data": "2024-12-01T10:00:00Z",
+    "local": "São Paulo, SP",
+    "descricao":
+      "Um evento completo para aprender desenvolvimento fullstack do zero.",
+    "imagem":
+      "https://play-lh.googleusercontent.com/mpBm6uxkAwCTaDL7us2iG0L-Lpxb6_vUYxJ5dBMSrKFGZoION2lUY5RkJYModzngyIk",
+    "imagemBackground":
+      "https://images.prismic.io/vaultinum/0458a9f1-e149-4037-b9aa-aa4b4fb53c25_propriete-intellectuelle-code-source-protection-compressed.jpg?auto=compress,format&rect=0,0,2400,981&w=2400&h=981",
+    "publicoEsperado": 200,
+    "convidados": [
+    {
+      "id": "a132a4a0-abb8-42d1-bb77-6d3479380f2a",
+      "nome": "Rui Mendonça",
+      "email": "rpfm.14@gmail.com",
+      "confirmado": true,
+      "possuiAcompanhantes": true,
+      "qtdeAcompanhantes": 2
+    }
+    ]
+}
